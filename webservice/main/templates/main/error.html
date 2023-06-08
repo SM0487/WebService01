@@ -1,0 +1,18 @@
+{% extends  'main/base.html' %}
+
+<!-- Блок с заголовком страници -->
+{% block title %}
+Ошибка
+{% endblock %}
+
+<!-- Блок с содержимым -->
+{% block content %}
+    <h1>Возникла ошибка в процессе выполнения программы!</h1>
+
+    {% if error_info %}
+        <p> {{ error_info }}</p>
+    {% else %}
+      <p>Неизвестная ошибка!</p>
+    {% endif %}
+
+{% endblock %}

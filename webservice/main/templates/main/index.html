@@ -1,0 +1,15 @@
+{% extends  'main/base.html' %}
+
+<!-- Блок с заголовком страници -->
+{% block title %}
+Главная
+{% endblock %}
+
+<!-- Блок с содержимым -->
+{% block content %}
+    <h2>История загрузки процессора за последний час</h2>
+    {% autoescape off %}
+        {{ plot_moment }}
+        {{ plot_mid }}
+    {% endautoescape %}
+{% endblock %}
